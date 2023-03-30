@@ -74,9 +74,13 @@ export default function SingleProduct(){
               </span>
             </div>
           </div>
+          <div className=" flex-col ml-6 items-center">
+  <input placeholder="Your pincode" className="shadow-mdborder border-purple-400 text-slate-900 px-1 placeholder-slate-900 mb-3"  />
+  <button className="px-2 py-1 bg-purple-600 text-white rounded-md ">Check</button>
+</div>
         </div>
         <div class="flex">
-          <span class="title-font font-medium text-2xl text-white">$58.00</span>
+          <span class="title-font font-medium text-2xl text-slate-800">$58.00</span>
           <button class="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Button</button>
           <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -84,10 +88,12 @@ export default function SingleProduct(){
             </svg>
           </button>
         </div>
+ 
       </div>
     </div>
   </div>
 </section>
+
         </div>
     )
 }

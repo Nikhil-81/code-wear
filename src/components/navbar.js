@@ -44,32 +44,8 @@ else if(!drawer.current.classList.contains("translate-x-full")){
 </header>
 <div  ref={drawer} className="absolute top-0 right-0 lg:w-1/3 md:max-w-3xl  h-screen bg-purple-400 transform translate-x-full transition delay-300 z-100" >
     <h2 className="text-white text-center mt-10 text-2xl ">My cart</h2>
-    <div  className="mx-10 overflow-y-scroll h-4/6 " >
+    <div  className="mx-10 overflow-y-scroll h-4/6 " >    
 
-    
-<table className="mx-10 overflow-y-scroll ">
-  <tr >
-    <th>Title</th>
-    <th>QTY</th>
-    <th>Remove</th>
-  </tr>
-  <tr className="shadow-md bg-slate-300 py-2" >
-    <td className="text-center" >Air jordan special </td>
-    <td className="quantity flex justify-around" ><span className="flex items-center gap-x-2 " >`<AiFillMinusCircle />  5  <AiFillPlusCircle/>`</span></td>
-    <td ><AiFillDelete className="block m-auto" /></td>
-  </tr>
-  <br/>
-  <tr className="shadow-md  bg-slate-400 ">
-    <td className="text-center" >Air jordan special Air jordan special  Air jordan special  </td>
-    <td className="quantity flex justify-around" ><span className="flex items-center gap-x-2 m-auto" >`<AiFillMinusCircle/>  5  <AiFillPlusCircle/>`</span></td>
-    <td ><AiFillDelete className="block m-auto" /></td>
-  </tr>
- <br/>
-
-
-
-  
-</table>
 </div>
     <div className="flex justify-center align-baseline mt-10 ">
       <button  className="bg-slate-200 p-3  rounded-md bold mr-3 " >Checkout</button>
