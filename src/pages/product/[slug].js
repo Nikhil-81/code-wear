@@ -1,8 +1,29 @@
 import { useRouter } from "next/router"
-import { useReducer } from "react"
+import { useReducer, useState } from "react"
 
 export default function SingleProduct(){
+  const [pincode,setpincode]=useState(null)
     const router=useRouter()
+    const [pin,setpin]=useState({"PIN":""})
+    const handlechange=(e)=>{
+   setpin({...pin,'PIN':e.target.value})
+    }
+    const Hendle_pin_check=async()=>{
+      let res=await fetch("http://localhost:3000/api/pin",{
+        method:"POST",
+        body:JSON.stringify(pin),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      let final=await res.json()
+      if(final){
+        setpincode(true)
+      }
+      else{
+        setpincode(false)
+      }
+    }
     const {slug} =router.query
     return (
         <div>
@@ -92,9 +113,10 @@ export default function SingleProduct(){
             </svg>
           </button>
           </div>
-          <div className=" flex justify-center align-middle mt-3 items-center">
-  <input placeholder="Your pincode" className="shadow-mdborder border-purple-400 text-slate-900 px-1 placeholder-slate-900 mr-3"  />
-  <button className="px-2 py-1 bg-purple-600 text-white rounded-md ">Check</button>
+          <div className=" flex  align-middle mt-3 items-center">
+  <input placeholder="Your pincode" className="shadow-mdborder border-purple-400 text-slate-900 px-1 placeholder-slate-900 mr-3" onChange={(e)=>handlechange(e)} />
+  <button className="px-2 py-1 bg-purple-600 text-white rounded-md " onClick={Hendle_pin_check} >Check</button>
+  {pincode==null ?(<p></p>):pincode==false?(<p class="ml-3 text-red-600 " >Delivery is not available in youtr area</p>):(<p class="ml-3 text-green-600 ">Delivery is possiable</p>)}
 </div>
  
       </div>
