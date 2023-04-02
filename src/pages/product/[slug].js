@@ -28,9 +28,9 @@ export default function SingleProduct(){
     return (
         <div>
 <section class="text-gray-600 bg-slate-100 body-font overflow-hidden">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 py-2 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
-      <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://i.pinimg.com/originals/d0/79/b8/d079b853bbe3e2d29b5b4d691d43b251.jpg"/>
+      <img alt="ecommerce" class="lg:w-1/2 md:w-3/2 md:h-3/2 sm:w-3/2 sm:h-1/2 w-full lg:h-auto py-6  h-64 object-cover object-center rounded" src="https://i.pinimg.com/originals/d0/79/b8/d079b853bbe3e2d29b5b4d691d43b251.jpg"/>
       <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
         <h1 class="text-gray-600 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
@@ -114,9 +114,11 @@ export default function SingleProduct(){
           </button>
           </div>
           <div className=" flex  align-middle mt-3 items-center">
+  <div className="md:flex-col" >
   <input placeholder="Your pincode" className="shadow-mdborder border-purple-400 text-slate-900 px-1 placeholder-slate-900 mr-3" onChange={(e)=>handlechange(e)} />
   <button className="px-2 py-1 bg-purple-600 text-white rounded-md " onClick={Hendle_pin_check} >Check</button>
   {pincode==null ?(<p></p>):pincode==false?(<p class="ml-3 text-red-600 " >Delivery is not available in youtr area</p>):(<p class="ml-3 text-green-600 ">Delivery is possiable</p>)}
+  </div>
 </div>
  
       </div>
