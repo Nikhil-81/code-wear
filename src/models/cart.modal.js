@@ -12,7 +12,6 @@ const CART_SCHEMA=new mongoose.Schema({
     address:{type:"string",require:true},
     amount:{type:"number",require:true},
     status:{type:"strung",default:"panding"}
-
 })
 
 const CART_model=mongoose.models.Cart ||mongoose.model("Cart",CART_SCHEMA) 

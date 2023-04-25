@@ -7,7 +7,6 @@ const PRODUCT_model=require("../../models/product.model")
 export default async function test(req,res){
   await Connect
 
-
   if(req.query.category){
 
     let data=await PRODUCT_model.find(req.query)
